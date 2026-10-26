@@ -46,6 +46,8 @@ The failure scenario I raised was concrete: a customer signs up, or a parcel imp
 
 I specified live-data preservation, exclusion of development-only data, and backup/recovery requirements. The AI and contractor supplied the deployment and recovery mechanics. Code rollback, schema changes, and restoring database rows are different operations; this work does not establish that every database change can be reversed automatically.
 
+The release workflow also needed to let a contractor deliver updates without production-server access or deployment credentials held in GitHub. I specified those constraints and required the pull-based approach to be retained during later changes. AI developed the mechanism and the contractor wrote most of the current deployment/restore implementation.
+
 ## 4. Measure the effect of cost controls
 
 Paid address lookups need spending controls, but a legitimate property manager might search several properties. I asked whether the system could show how often limits were encountered and whether useful customer inquiries were being blocked.
