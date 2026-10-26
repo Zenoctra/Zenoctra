@@ -12,12 +12,12 @@ The later workflow uses published PDF and spreadsheet outlines. The source struc
 
 I specified how to preserve heading hierarchy, derive verse ranges, handle source-specific exceptions, and merge records into canonical order. PDF indentation and spreadsheet headings needed to become explicit fields in CSV rather than disappear during extraction.
 
-```mermaid
-flowchart LR
-    A[Published PDF and spreadsheet outlines] --> B[Hierarchical CSV]
-    B --> C[Passage planning]
-    C --> D[Shared passage records]
-    D --> E[Song versions and reviews]
+```text
+Published PDF and spreadsheet outlines
+  -> hierarchical CSV
+  -> passage planning
+  -> shared passage records
+  -> song versions and reviews
 ```
 
 AI supplied the parsing libraries and implementation syntax. My contribution was deciding what structure the transformation had to preserve and how the source fields should map into usable records.
