@@ -12,11 +12,11 @@ A quote form needs dependable parcel information, not plausible-looking sample d
 
 The implemented import maps external fields into a common record, normalizes addresses, validates usable identifiers and lot sizes, and updates records without creating another copy on each run.
 
-```mermaid
-flowchart LR
-    A[County parcel records] --> B[Map, normalize, validate]
-    B --> C[Identify and upsert]
-    C --> D[Application records and quoting]
+```text
+County parcel records
+  -> map, normalize, and validate
+  -> identify and insert/update records
+  -> application records and quoting
 ```
 
 I specified the data source, update requirements, and business edge cases. The AI/contractor chose and wrote the pagination, field mapping, batching, and upsert implementation. MariaDB was an accepted technology choice.
